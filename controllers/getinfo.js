@@ -22,7 +22,7 @@ exports.getinfoRtl = (req,res) => {
             block_height: data.blockheight,
             synced_to_chain: true,
             testnet: (data.network.includes('testnet')) ? true : false,
-            chains: [{chain:'bitcoin', network: data.network}],
+            chains: [{chain:'groestlcoin', network: data.network}],
             version: data.version
         };
         global.logger.log(getinfodata);

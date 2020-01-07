@@ -16,7 +16,7 @@ var macaroon = Buffer.from(abc).toString("base64");
 
 //Read the config params
 //If the cl-rest server is being run as plugin,
-//the config params should match with the ones specified in the c-lightning config 
+//the config params should match with the ones specified in the c-lightning config
 let rawconfig = fs.readFileSync (configFile, function (err){
 if (err){
         console.warn("Failed to read config key");
@@ -35,7 +35,7 @@ if (config.PROTOCOL === 'https')
 //Parent block
 describe('lnnode', () => {
     before((done) => {
-           done();           
+           done();
     });
 
 // Test the Getinfo route
@@ -161,7 +161,7 @@ describe('/GET getBalance', () => {
 
 // Test the newaddr route
 describe('/GET newaddr', () => {
-    it('it should return a bitcoin address from the node', (done) => {
+    it('it should return a groestlcoin address from the node', (done) => {
       chai.request(server)
           .get('/v1/newaddr')
           .set('macaroon', macaroon)

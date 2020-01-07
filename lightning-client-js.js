@@ -22,21 +22,21 @@ class LightningClient extends EventEmitter {
         if (!path.isAbsolute(rpcPath)) {
             throw new Error('The rpcPath must be an absolute path');
         }
-        
+
         if (!fExists(rpcPath) || !fStat(rpcPath).isSocket()){
             // network directory provided, use the lightning-rpc within in
             if (fExists(rpcPath, 'lightning-rpc')) {
             rpcPath = path.join(rpcPath, 'lightning-rpc');
             }
-        
-            // main data directory provided, default to using the bitcoin mainnet subdirectory
-            else if (fExists(rpcPath, 'bitcoin', 'lightning-rpc')) {
-            console.error(`WARN: ${rpcPath}/lightning-rpc is missing, using the bitcoin mainnet subdirectory at ${rpcPath}/bitcoin instead.`)
-            rpcPath = path.join(rpcPath, 'bitcoin', 'lightning-rpc')
+
+            // main data directory provided, default to using the groestlcoin mainnet subdirectory
+            else if (fExists(rpcPath, 'groestlcoin', 'lightning-rpc')) {
+            console.error(`WARN: ${rpcPath}/lightning-rpc is missing, using the groestlcoin mainnet subdirectory at ${rpcPath}/groestlcoin instead.`)
+            rpcPath = path.join(rpcPath, 'groestlcoin', 'lightning-rpc')
             }
-            // or using the bitcoin testnet subdirectory
+            // or using the groestlcoin testnet subdirectory
             else if (fExists(rpcPath, 'testnet', 'lightning-rpc')) {
-            console.error(`WARN: ${rpcPath}/lightning-rpc is missing, using the bitcoin testnet subdirectory at ${rpcPath}/testnet instead.`)
+            console.error(`WARN: ${rpcPath}/lightning-rpc is missing, using the groestlcoin testnet subdirectory at ${rpcPath}/testnet instead.`)
             rpcPath = path.join(rpcPath, 'testnet', 'lightning-rpc')
             }
         }
@@ -143,7 +143,7 @@ class LightningClient extends EventEmitter {
                 somedata = ''
             }
         }
-    
+
     }
 }
 

@@ -1,5 +1,5 @@
 {
-  "name": "c-lightning-rest",
+  "name": "c-lightning-rest-grs",
   "version": "0.1.0",
   "description": "c-lightning REST API suite",
   "main": "cl-rest.js",
@@ -12,7 +12,7 @@
     "REST",
     "api"
   ],
-  "author": "saubyk",
+  "author": "Groestlcoin Developers",
   "license": "MIT",
   "dependencies": {
     "atob": "^2.1.2",

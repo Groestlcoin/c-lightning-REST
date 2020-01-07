@@ -23,7 +23,7 @@ Help command example: `$ lightning-cli help getinfo`
 ### withdraw
 - Type: `POST`
 - Sample request URL: `https://localhost:3001/v1/withdraw`
-- Required Params: `address`(Any Bitcoin accepted type, including bech32), `satoshis`
+- Required Params: `address`(Any Groestlcoin accepted type, including bech32), `satoshis`
 - Optional Params: `feeRate`(review c-lightning documentation for the options), `minconf`
 - Response:
 "tx", "txid"

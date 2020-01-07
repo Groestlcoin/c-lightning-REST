@@ -16,7 +16,7 @@
 *     parameters:
 *       - in: body
 *         name: address
-*         description: Any Bitcoin accepted type, including bech32
+*         description: Any Groestlcoin accepted type, including bech32
 *         type: string
 *         required:
 *           - address
