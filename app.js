@@ -33,6 +33,7 @@ app.use((req, res, next) => {
 
 //Use declared routes here
 app.use('/v1/getinfo', require('./routes/getinfo'));
+app.use('/v1/utility', require('./routes/getinfo'));
 app.use('/v1/newaddr', require('./routes/newaddr'));
 app.use('/v1/getBalance', require('./routes/getBalance'));
 app.use('/v1/listFunds', require('./routes/listfunds'));
@@ -43,5 +44,6 @@ app.use('/v1/channel', require('./routes/channel'));
 app.use('/v1/pay', require('./routes/payments'));
 app.use('/v1/invoice', require('./routes/invoice'));
 app.use('/v1/network', require('./routes/network'));
+app.use('/v1/rpc', require('./routes/rpc'));
 
 module.exports = app;
